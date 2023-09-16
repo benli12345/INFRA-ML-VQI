@@ -165,8 +165,8 @@ auc(test_under70$MALE_DEATH_1yr, pred_under70)
 ci.auc(test_under70$MALE_DEATH_1yr, pred_under70)
 
 pred_over70 <- predict(XGB_preop, as.matrix(predictors_test_over70))
-auc(test_under70$MALE_DEATH_1yr, pred_over70)
-ci.auc(test_under70$MALE_DEATH_1yr, pred_over70)
+auc(test_over70$MALE_DEATH_1yr, pred_over70)
+ci.auc(test_over70$MALE_DEATH_1yr, pred_over70)
 
 perf_under70 <- prediction(pred_under70, test_under70$MALE_DEATH_1yr)
 perf_under70 <- performance(perf_under70, "tpr", "fpr")
